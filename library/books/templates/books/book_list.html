@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home - {{ block.super }}
+{% endblock %}
+
+{% block main %}
+{% for book in book_list %}
+
+<ul class="list-group">
+    <li class="list-group-item active"><b>Title: </b>{{book.title}}</li>
+  <li class="list-group-item"><b>Subtitle: </b>{{book.subtitle}}</li>
+  <li class="list-group-item"><b>ISBN: </b>{{book.isbn}}</li>
+  <li class="list-group-item"><b>Author: </b>{{book.author}}</li>
+</ul>
+
+{% endfor %}
+
+
+{% endblock %}
